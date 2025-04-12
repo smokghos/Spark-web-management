@@ -1,0 +1,16 @@
+G:\open\Spark-web-management\src\main\java\com\spark\controller\DeptController.java
+G:\open\Spark-web-management\src\main\java\com\spark\service\impl\EmpServiceImpl.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\PageResult.java
+G:\open\Spark-web-management\src\main\java\com\spark\service\impl\DeptServiceImpl.java
+G:\open\Spark-web-management\src\main\java\com\spark\mapper\DeptMapper.java
+G:\open\Spark-web-management\src\main\java\com\spark\mapper\EmpExprMapper.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\EmpExpr.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\Emp.java
+G:\open\Spark-web-management\src\main\java\com\spark\controller\EmpController.java
+G:\open\Spark-web-management\src\main\java\com\spark\service\EmpService.java
+G:\open\Spark-web-management\src\main\java\com\spark\mapper\EmpMapper.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\Result.java
+G:\open\Spark-web-management\src\main\java\com\spark\SparkWebManagementApplication.java
+G:\open\Spark-web-management\src\main\java\com\spark\service\DeptService.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\EmpQueryParam.java
+G:\open\Spark-web-management\src\main\java\com\spark\pojo\Dept.java
