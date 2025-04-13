@@ -12,7 +12,7 @@ import java.util.List;
 public interface EmpMapper {
 
 
-    List<Emp> list(EmpQueryParam empQueryParam);
+    List<Emp> list( EmpQueryParam empQueryParam);
     /**
      * 新增员工数据
      */
