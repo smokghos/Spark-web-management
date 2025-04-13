@@ -10,4 +10,6 @@ import java.util.List;
 public interface EmpExprMapper  {
 
     void insertBatch(@Param("exprList") List<EmpExpr> exprList);
+
+    void deleteByEmpIds(@Param("empIds") List<Integer> empIds);
 }

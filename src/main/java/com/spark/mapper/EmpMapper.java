@@ -5,6 +5,7 @@ import com.spark.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,6 +22,14 @@ public interface EmpMapper {
             " update_time) values (#{username},#{name},#{gender},#{phone},#{job},#{salary},#{image},#{entryDate}," +
             "#{deptId},#{createTime},#{updateTime})")
     void insert(Emp emp);
+    //@Param("ids")使用集合显式指定参数名
+    void deleteByIds(@Param("ids") List<Integer> ids);
+
+    Emp getById(Integer id);
+    /**
+     * 更新员工基本信息
+     */
+    void updateById(Emp emp);
 }
 
 

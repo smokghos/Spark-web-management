@@ -48,19 +48,21 @@ public class DeptController {
 
     @PostMapping()
     public Result add(@RequestBody Dept dept) {
-        log.info("新增部门, dept: {}" , dept);
+        log.info("新增部门, dept: {}", dept);
         deptService.add(dept);
         return Result.success();
     }
+
     @GetMapping("/{id}")
-    public Result getInfo (@PathVariable Integer id){
-        log.info("根据ID查询, id: {}" , id);
+    public Result getInfo(@PathVariable Integer id) {
+        log.info("根据ID查询, id: {}", id);
         Dept dept = deptService.getInfo(id);
         return Result.success(dept);
     }
+
     @PutMapping("/depts")
-    public Result update (@RequestBody Dept dept ) {
-        log.info("修改部门, dept: {}" , dept);
+    public Result update(@RequestBody Dept dept) {
+        log.info("修改部门, dept: {}", dept);
         deptService.update(dept);
         return Result.success();
     }
