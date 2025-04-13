@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.spark</groupId>
     <artifactId>Spark-web-management</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>Spark-web-management</name>
     <description>Spark-web-management</description>
     <properties>
@@ -65,6 +65,8 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
+
+        <!--jdk9以上需要加-->
         <dependency>
             <groupId>javax.activation</groupId>
             <artifactId>activation</artifactId>

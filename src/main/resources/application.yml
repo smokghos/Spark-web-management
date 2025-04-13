@@ -18,6 +18,13 @@ mybatis:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/*.xml
 
+#阿里云OSS
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: spark-web-management
+    region: cn-beijing
+
 #分页查询配置
 pagehelper:
   reasonable: true
