@@ -1,6 +1,5 @@
 package com.spark.controller;
 
-
 import com.spark.pojo.Dept;
 import com.spark.pojo.Result;
 import com.spark.service.DeptService;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 
 /**
  * 部门管理控制器
@@ -23,22 +21,22 @@ public class DeptController {
     private DeptService deptService;
 
     /**
-     * 查询部门列表
+     * 获取部门列表
+     *
+     * @return 部门列表
      */
-//    @RequestMapping(value = "/depts",method = RequestMethod.GET)
     @GetMapping()
     public Result list() {
         List<Dept> deptList = deptService.findAll();
         return Result.success(deptList);
     }
 
-    /*@DeleteMapping("/depts")
-    public Result delete(HttpServletRequest httpServletRequest) {
-        String idStr = httpServletRequest.getParameter("id");
-        int deptID =Integer.parseInt(idStr);
-        System.out.println("根据ID删除部门 " + deptID);
-        return Result.success();
-    }*/
+    /**
+     * 删除部门
+     *
+     * @param id 部门ID
+     * @return 操作结果
+     */
     @DeleteMapping()
     public Result delete(Integer id) {
         log.info("查询部门列表");
@@ -46,6 +44,12 @@ public class DeptController {
         return Result.success();
     }
 
+    /**
+     * 新增部门
+     *
+     * @param dept 部门对象
+     * @return 操作结果
+     */
     @PostMapping()
     public Result add(@RequestBody Dept dept) {
         log.info("新增部门, dept: {}", dept);
@@ -53,6 +57,12 @@ public class DeptController {
         return Result.success();
     }
 
+    /**
+     * 根据ID查询部门信息
+     *
+     * @param id 部门ID
+     * @return 部门信息
+     */
     @GetMapping("/{id}")
     public Result getInfo(@PathVariable Integer id) {
         log.info("根据ID查询, id: {}", id);
@@ -60,6 +70,12 @@ public class DeptController {
         return Result.success(dept);
     }
 
+    /**
+     * 修改部门信息
+     *
+     * @param dept 部门对象
+     * @return 操作结果
+     */
     @PutMapping("/depts")
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门, dept: {}", dept);

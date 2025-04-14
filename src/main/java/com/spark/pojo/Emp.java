@@ -6,6 +6,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * 员工类，用于表示员工信息
+ */
 @Data
 public class Emp {
     private Integer id; //ID,主键

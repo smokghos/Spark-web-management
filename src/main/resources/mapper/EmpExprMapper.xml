@@ -13,9 +13,9 @@
     </insert>
     <delete id="deleteByEmpIds">
         delete from emp_expr where emp_id in
-                             <foreach collection="empIds" item="empId" open="(" close=")" separator=",">
-                                 #{empId}
-                             </foreach>
+        <foreach collection="empIds" item="empId" open="(" close=")" separator=",">
+            #{empId}
+        </foreach>
     </delete>
 
 </mapper>

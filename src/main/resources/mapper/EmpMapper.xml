@@ -10,6 +10,7 @@
                             #{id}
                         </foreach>
     </delete>
+    <!--根据条件查询员工列表-->
     <select id="list" resultType="com.spark.pojo.Emp">
             select e.*, d.name deptName from emp as e left join dept as d on e.dept_id = d.id
             <where>
