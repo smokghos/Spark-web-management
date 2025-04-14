@@ -11,6 +11,8 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 100MB
+  main:
+    banner-mode: console
 #mybatis配置
 mybatis:
   configuration:
@@ -29,6 +31,7 @@ aliyun:
 pagehelper:
   reasonable: true
   helper-dialect: mysql
+
 
 #spring事务管理日志
 logging:
