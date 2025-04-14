@@ -1,5 +1,6 @@
-理解你的问题: doing
-收集相关的信息: doing
+
+---
+
 # Spark Web Management 项目 README
 
 ## 项目简介
@@ -8,6 +9,7 @@ Spark Web Management 是一个基于 Spring Boot 的后端管理系统，主要�
 ---
 
 ## 技术栈
+- **JDK**: 1.8
 - **框架**: Spring Boot 2.6.13
 - **数据库**: MySQL
 - **ORM 框架**: MyBatis
@@ -18,9 +20,17 @@ Spark Web Management 是一个基于 Spring Boot 的后端管理系统，主要�
 
 ---
 
+## 环境要求
+- **操作系统**: Windows
+- **JDK版本**: 1.8
+- **构建工具**: Maven
+- **数据库**: MySQL（需提前安装并配置）
+
+---
+
 ## 项目结构
 ### 目录说明
-```
+```plaintext
 src/main/java/com/spark/
 ├── controller/       # 控制器层，处理 HTTP 请求
 ├── mapper/           # Mapper 接口，定义数据库操作方法
@@ -32,15 +42,17 @@ src/main/java/com/spark/
 ```
 
 
-### 核心依赖
-| 功能模块         | 依赖名称                          | 版本      |
-|------------------|-----------------------------------|-----------|
-| Spring Boot      | spring-boot-starter-web          | 2.6.13    |
-| MyBatis         | mybatis-spring-boot-starter       | 2.2.2     |
-| 数据库连接       | mysql-connector-j                | -         |
-| 分页插件         | pagehelper-spring-boot-starter   | 1.4.7     |
-| 阿里云 OSS       | aliyun-sdk-oss                   | 3.17.4    |
-| 日志             | logback                          | -         |
+---
+
+## 核心依赖
+| 功能模块         | 依赖名称                          | 版本     |
+|------------------|-----------------------------------|--------|
+| Spring Boot      | spring-boot-starter-web          | 2.6.13 |
+| MyBatis         | mybatis-spring-boot-starter       | 2.2.2  |
+| 数据库连接       | mysql-connector-j                | 8.0.31 |
+| 分页插件         | pagehelper-spring-boot-starter   | 1.4.7  |
+| 阿里云 OSS       | aliyun-sdk-oss                   | 3.17.4 |
+| 日志             | logback                          | 1.2.11 |
 
 ---
 
@@ -51,9 +63,9 @@ src/main/java/com/spark/
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: 
-    username: 
-    password: 
+    url: jdbc:mysql://localhost:3306/your_database_name?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: your_username
+    password: your_password
 ```
 
 
@@ -63,13 +75,13 @@ spring:
 aliyun:
   oss:
     endpoint: https://oss-cn-beijing.aliyuncs.com
-    bucketName: spark-web-management
+    bucketName: your_bucketName
     region: cn-beijing
 ```
 
 
 ### 日志配置
-日志输出到控制台和文件，文件路径为 `G:\open\Spark-web-management\log\`，每日生成一个日志文件。
+日志输出到控制台和文件，文件路径为 `G:\open\Spark-web-management\log\`，建议自己更改路径，每日生成一个日志文件。
 
 ---
 
@@ -86,7 +98,6 @@ aliyun:
 
 ### 3. 工作经历管理
 - **EmpExprMapper**: 定义员工工作经历的数据库操作。
-- **EmpExpr.java**: 工作经历实体类。
 
 ### 4. 文件上传
 - **UploadController**: 提供文件上传接口。
@@ -146,4 +157,6 @@ mvn test
 ---
 
 ## 联系方式
-如有任何问题或建议，提交issue
+如有任何问题或建议，请提交 issue。
+
+---
