@@ -49,4 +49,6 @@ public interface EmpService {
      * @param emp 一个员工实体对象，包含要更新的员工信息
      */
     void update(Emp emp);
+
+    List<Emp> list();
 }

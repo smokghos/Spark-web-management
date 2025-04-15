@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spark.mapper.ClazzMapper">
 
-    <!--动态更新班级信息
+<!--动态更新班级信息-->
     <update id="update">
         update clazz
         <set>
@@ -31,10 +31,15 @@
             </if>
         </set>
         where id = #{id}
-    </update>-->
+    </update>
 
+<!-- resultMap 配置 -->
+<resultMap id="clazzResultMap" type="com.spark.pojo.Clazz">
+    <result column="begin_Date" property="beginDate"/>
+    <result column="end_Date" property="endDate"/>
+</resultMap>
 
-    <select id="list" resultType="com.spark.pojo.Clazz">
+    <select id="list" resultMap="clazzResultMap">
         select
         c.*,
         e.name masterName,
