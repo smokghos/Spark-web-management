@@ -48,7 +48,6 @@ public class ReportController {
     @GetMapping("/empGenderData")
     public Result getEmpGenderData() {
         log.info("统计员工性别人数");
-        //TODO List<Map<String, Object>>
         List<Map<String, Object>> genderList = reportService.getEmpGenderData();
         return Result.success(genderList);
     }
