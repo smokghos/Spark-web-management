@@ -7,7 +7,7 @@
     <!-- 项目坐标 -->
     <groupId>com.spark</groupId>
     <artifactId>Spark-web-management</artifactId>
-    <version>0.0.1</version>
+    <version>0.9.0</version>
 
     <!-- 项目元数据 -->
     <name>Spark-web-management</name>
@@ -117,6 +117,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Jakarta Servlet API -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
