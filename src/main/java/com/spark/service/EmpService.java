@@ -5,6 +5,7 @@ package com.spark.service;
 
 import com.spark.pojo.Emp;
 import com.spark.pojo.EmpQueryParam;
+import com.spark.pojo.LoginInfo;
 import com.spark.pojo.PageResult;
 
 import java.util.List;
@@ -51,4 +52,9 @@ public interface EmpService {
     void update(Emp emp);
 
     List<Emp> list();
+
+    /**
+     * 登录
+     */
+    LoginInfo login(Emp emp);
 }

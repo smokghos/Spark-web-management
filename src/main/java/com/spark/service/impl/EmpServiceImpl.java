@@ -14,7 +14,6 @@ import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -127,5 +126,15 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public List<Emp> list() {
         return empMapper.findAll();
+    }
+
+    @Override
+    public LoginInfo login(Emp emp) {
+        Emp empLogin = empMapper.getUsernameAndPassword(emp);
+        if(empLogin != null){
+            LoginInfo loginInfo = new LoginInfo(empLogin.getId(), empLogin.getUsername(), empLogin.getName(), null);
+            return loginInfo;
+        }
+        return null;
     }
 }

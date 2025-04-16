@@ -6,6 +6,10 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+/**
+ * 全局异常处理器类，用于捕获和处理项目中的异常。
+ * 统一返回错误信息，提升系统的健壮性和用户体验。
+ */
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {

@@ -13,7 +13,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
- * 班级控制器类，用于处理与班级相关的HTTP请求
+ * 班级控制器类，用于处理与班级相关的HTTP请求。
+ * 提供班级的增删改查接口，支持分页查询和条件筛选。
  */
 @Slf4j
 @RestController

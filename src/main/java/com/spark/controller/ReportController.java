@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 报表控制器类，用于处理与报表生成相关的请求
+ * 报表控制器类，用于处理与报表生成相关的HTTP请求。
+ * 提供员工职位统计、班级统计等报表数据的查询接口。
  */
 @Slf4j
 @RestController

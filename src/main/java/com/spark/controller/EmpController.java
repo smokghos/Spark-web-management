@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 员工信息控制器类，用于处理与员工相关的HTTP请求
+ * 员工信息控制器类，用于处理与员工相关的HTTP请求。
+ * 提供员工的增删改查接口，支持分页查询和条件筛选。
  */
 @Slf4j
 @RestController
