@@ -3,6 +3,8 @@ package com.spark.controller;
 import com.spark.pojo.Dept;
 import com.spark.pojo.Result;
 import com.spark.service.DeptService;
+import com.spark.anno.LogOperation;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,6 +39,7 @@ public class DeptController {
      * @param id 部门ID
      * @return 操作结果
      */
+    @LogOperation // 添加此注解
     @DeleteMapping()
     public Result delete(Integer id) {
         log.info("查询部门列表");
@@ -50,6 +53,7 @@ public class DeptController {
      * @param dept 部门对象
      * @return 操作结果
      */
+    @LogOperation // 添加此注解
     @PostMapping()
     public Result add(@RequestBody Dept dept) {
         log.info("新增部门, dept: {}", dept);
@@ -76,6 +80,7 @@ public class DeptController {
      * @param dept 部门对象
      * @return 操作结果
      */
+    @LogOperation // 添加此注解
     @PutMapping("/depts")
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门, dept: {}", dept);

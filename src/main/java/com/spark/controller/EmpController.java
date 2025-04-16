@@ -5,6 +5,8 @@ import com.spark.pojo.EmpQueryParam;
 import com.spark.pojo.PageResult;
 import com.spark.pojo.Result;
 import com.spark.service.EmpService;
+import com.spark.anno.LogOperation;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -42,6 +44,7 @@ public class EmpController {
      * @param emp 新增员工的信息
      * @return 返回新增结果
      */
+    @LogOperation // 添加此注解
     @PostMapping
     public Result save(@RequestBody Emp emp) {
         log.info("新增员工 {}", emp);
@@ -55,6 +58,7 @@ public class EmpController {
      * @param ids 需要删除的员工ID列表
      * @return 返回删除结果
      */
+    @LogOperation // 添加此注解
     @DeleteMapping
     public Result delete(@RequestParam List<Integer> ids){
         log.info("删除员工信息 " + ids);
@@ -81,6 +85,7 @@ public class EmpController {
      * @param emp 需要更新的员工信息
      * @return 返回更新结果
      */
+    @LogOperation // 添加此注解
     @PutMapping
     public Result update(@RequestBody Emp emp){
         log.info("修改员工信息, {}", emp);

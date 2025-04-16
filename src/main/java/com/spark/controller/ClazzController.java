@@ -4,6 +4,8 @@ import com.spark.pojo.Clazz;
 import com.spark.pojo.PageResult;
 import com.spark.pojo.Result;
 import com.spark.service.ClazzService;
+import com.spark.anno.LogOperation;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -66,6 +68,7 @@ public class ClazzController {
      * @param clazz 新班级的信息
      * @return 添加结果
      */
+    @LogOperation // 添加此注解
     @PostMapping
     public Result save(@RequestBody Clazz clazz){
         log.info("添加新的班级信息 ");
@@ -79,6 +82,7 @@ public class ClazzController {
      * @param id 要删除的班级的ID
      * @return 删除结果
      */
+    @LogOperation // 添加此注解
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("根据ID删除班级信息 " + id);
@@ -98,13 +102,15 @@ public class ClazzController {
         Clazz clazz = clazzService.getInfo(id);
         return Result.success(clazz);
     }
+
     /**
      * 更新班级信息
      * @param clazz 要更新的班级对象
      * @return 更新结果
      */
+    @LogOperation // 添加此注解
     @PutMapping
-    public  Result update(@RequestBody Clazz clazz){
+    public Result update(@RequestBody Clazz clazz){
         log.info("更新班级信息 ");
         clazzService.update(clazz);
         return Result.success();

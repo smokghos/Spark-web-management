@@ -4,6 +4,8 @@ import com.spark.pojo.PageResult;
 import com.spark.pojo.Result;
 import com.spark.pojo.Student;
 import com.spark.service.StudentService;
+import com.spark.anno.LogOperation;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +48,7 @@ public class StudentController {
      * @param student 学生对象
      * @return 保存结果
      */
+    @LogOperation // 添加此注解
     @PostMapping
     public Result save(@RequestBody Student student){
         log.info("保存学生信息 ");
@@ -72,6 +75,7 @@ public class StudentController {
      * @param student 学生对象
      * @return 更新结果
      */
+    @LogOperation // 添加此注解
     @PutMapping
     public Result update(@RequestBody Student student){
         log.info("更新学生信息 ");
@@ -99,6 +103,7 @@ public class StudentController {
      * @param ids 学生ID列表
      * @return 删除结果
      */
+    @LogOperation // 添加此注解
     @DeleteMapping("/{ids}")
     public Result delete(@PathVariable List<Integer> ids){
         log.info("删除学生信息 ");
