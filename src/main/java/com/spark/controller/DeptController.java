@@ -81,7 +81,7 @@ public class DeptController {
      * @return 操作结果
      */
     @LogOperation // 添加此注解
-    @PutMapping("/depts")
+    @PutMapping
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门, dept: {}", dept);
         deptService.update(dept);
